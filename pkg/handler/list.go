@@ -85,11 +85,12 @@ func (h *Handler) getAllLists(c *gin.Context) {
 // @ID get-list-by-id
 // @Accept  json
 // @Produce  json
+// @Param id path int true "List ID"
 // @Success 200 {object} todo.TodoList
 // @Failure 400,404 {object} errorResponse
 // @Failure 500 {object} errorResponse
 // @Failure default {object} errorResponse
-// @Router /api/lists/:id [get]
+// @Router /api/lists/{id} [get]
 func (h *Handler) getListById(c *gin.Context) {
 	userId, err := getUserId(c)
 	if err != nil {

@@ -130,7 +130,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/api/lists/:id": {
+        "/api/lists/{id}": {
             "get": {
                 "security": [
                     {
@@ -149,6 +149,15 @@ const docTemplate = `{
                 ],
                 "summary": "Get List By Id",
                 "operationId": "get-list-by-id",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "List ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "OK",
