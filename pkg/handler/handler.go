@@ -5,6 +5,8 @@ import (
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"     // swagger embed files
 	ginSwagger "github.com/swaggo/gin-swagger" // gin-swagger middleware
+
+	_ "github.com/Relax-FM/todo-app-go/docs"
 )
 
 type Handler struct {
